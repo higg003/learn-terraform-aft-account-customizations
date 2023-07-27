@@ -17,3 +17,5 @@ sed -i "s|ACCOUNT_NAME|${ACCOUNT_NAME}|g" "${DEFAULT_PATH}"/"${CUSTOMIZATION}"/t
 echo "Checking Locals file"
 
 cat "${DEFAULT_PATH}"/"${CUSTOMIZATION}"/terraform/locals.tf
+
+export AWS_PROFILE=aft-target
