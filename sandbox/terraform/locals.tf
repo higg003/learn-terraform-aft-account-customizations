@@ -1,4 +1,5 @@
 locals {
 
-    account_name = "ACCOUNT_NAME"
+  us_deployment = true
+  account_name  = "ACCOUNT_NAME"
 }
