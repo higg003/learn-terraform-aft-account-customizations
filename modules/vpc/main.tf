@@ -49,7 +49,7 @@ resource "aws_route_table" "app_route_table" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    Name = "${var.vpc_name}-RT"
+    Name = "${var.vpc_name}-APP-RT"
   }
 
 }
@@ -59,7 +59,7 @@ resource "aws_route_table" "rds_route_table" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    Name = "${var.vpc_name}-RT"
+    Name = "${var.vpc_name}-RDS-RT"
   }
 
 }
