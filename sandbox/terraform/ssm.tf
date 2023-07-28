@@ -1,8 +1,6 @@
 resource "aws_ssm_parameter" "foo" {
 
-  providers = {
-    aws = aws.us
-  }
+  provider = aws.us
 
   name  = "/accID"
   type  = "String"
