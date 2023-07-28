@@ -15,6 +15,19 @@ provider "aws" {
 }
 
 provider "aws" {
+  alias = "eu"
+  region = "eu-central-1"
+  assume_role {
+    role_arn    = "{{ target_admin_role_arn }}"
+  }
+  default_tags {
+    tags = {
+      managed_by                  = "AFT"
+    }
+  }
+}
+
+provider "aws" {
   region = "{{ provider_region }}"
   assume_role {
     role_arn    = "{{ target_admin_role_arn }}"
