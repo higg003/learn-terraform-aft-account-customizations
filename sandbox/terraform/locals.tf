@@ -1,5 +1,6 @@
 locals {
 
-  us_deployment = true
-  account_name  = "ACCOUNT_NAME"
+  ## Changed by pre-api-helper.sh script
+  account_name = "ACCOUNT_NAME"
+
 }
