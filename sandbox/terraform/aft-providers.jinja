@@ -2,7 +2,7 @@
 ## Updated on: {{ timestamp }} ##
 
 provider "aws" {
-  region = "{{ provider_region }}"
+  region = "us-east-1"
   assume_role {
     role_arn    = "{{ target_admin_role_arn }}"
   }
