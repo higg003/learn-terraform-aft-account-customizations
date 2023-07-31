@@ -24,7 +24,7 @@ resource "aws_subnet" "app_subnet" {
   cidr_block        = var.app_subnet_cidr_block[count.index]
 
   tags = {
-    Name = "${var.vpc_name}-APP-${count.index}"
+    Name = "${var.vpc_name}-APP-${count.index + 1}"
   }
 }
 
@@ -36,7 +36,7 @@ resource "aws_subnet" "rds_subnet" {
   cidr_block        = var.rds_subnet_cidr_block[count.index]
 
   tags = {
-    Name = "${var.vpc_name}-RDS-${count.index}"
+    Name = "${var.vpc_name}-RDS-${count.index + 1}"
   }
 }
 

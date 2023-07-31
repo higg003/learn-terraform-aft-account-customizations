@@ -22,8 +22,11 @@ variable "az_list" {
   description = "List of AZs to use for the VPC"
   default     = ["us-east-1a", "us-east-1b"]
   validation {
-    condition     = length(var.az_list) > 0
-    error_message = "Variable var: az_list cannot be empty."
+    condition     = (
+      contains(["us-east-1a", "us-east-1b", "eu-central-1a", "eu-central-1b"], var.az_list[0]) &&
+      contains(["us-east-1a", "us-east-1b", "eu-central-1a", "eu-central-1b"], var.az_list[1])
+    )
+    error_message = "Valid values for var: az_list are (us-east-1a, us-east-1b, eu-central-1a and eu-central-1b)."
   }
 }
 
